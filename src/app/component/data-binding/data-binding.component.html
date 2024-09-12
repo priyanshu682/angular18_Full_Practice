@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="g-col-4">
+    <h2 class="text-primary">One-Way Data Binding</h2>
+    <div class="row">
+      <div class="g-col-4">
+        <h2 class="text-secondary">Interpolation</h2>
+        <h4 class="bg-success">{{courseName}}</h4>
+        <input type="{{inputType}}" />
+        <input type="text" value="{{courseName}}" placeholder="Enter text" />
+      </div>
+      <div class="g-col-4">
+        <h2 class="text-secondary">Property Binding</h2>
+        <input [type]="classType" />
+        <h4 class="bg-success" [innerText]="courseName"></h4>
+      </div>
+      <div class="g-col-4">
+        <h2 class="text-secondary">Class Binding .html to .ts</h2>
+        <button class="btn btn-success" (click)="showAlert('Welcome to Angular18')">Show</button>
+        <span class="btn" (click)="showAlert('This is from span')">Hello</span>
+        <button class="btn btn-success" (click)="changeCourseName()">Change Course</button>
+      </div>
+    </div>
+    <div class="g-col-4">
+      <h2 class="text-primary">Two-way Data Binding</h2>
+      <div class="row">
+        <div class="g-col-6">
+          <input class="text" [(ngModel)]="courseName" />
+          <input type="checkbox" [(ngModel)]="isChecked" />
+          <select [(ngModel)]="stateName">
+            <option value="">Select</option>
+            <option value="UP">UP</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Goa">Goa</option>
+          </select>
+        </div>
+        <div class="g-col-6">
+          <input type="text" value="{{firstName()}}" />
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+    </div>
+  </div>

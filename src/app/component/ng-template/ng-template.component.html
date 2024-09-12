@@ -1,0 +1,58 @@
+<div class="mt-2 p-2 bg-secondary text-white rounded">
+  <h1>Ng-Template</h1>
+</div>
+<div class="row pt-3">
+  <div class="col-3">
+    <div class="p-3 text-center bg-primary" *ngIf="isUserLoggedIn;else notLogged"> {{userName}} </div>
+    <ng-template #notLogged>
+      <div class="p-3 text-center bg-danger">
+        <span>User Not Logged In</span>
+      </div>
+    </ng-template>
+  </div>
+  <div class="col-3">
+    <div #dynamicContainer1></div>
+  </div>
+  <div class="col-3">
+    <div #dynamicContainer2></div>
+  </div>
+  <div class="col-3"></div>
+</div>
+<div class="row pt-3">
+  <div class="col-3 text-center">
+    <button class="btn btn-success mx-1" (click)="show()">Success</button>
+    <button class="btn btn-danger" (click)="hide()">Hide</button>
+  </div>
+  <div class="col-3 text-center">
+    <button class="btn btn-primary" (click)="loadTemplate()">Load Template</button>
+  </div>
+  <div class="col-3 text-center">
+    <input type="text" class="w-50" [(ngModel)]="templateNumber" placeholder="templateNumber"/>
+    <button class="btn btn-success m-2" (click)="loadTemplate1(templateNumber)">Load Template</button>
+  </div>
+</div>
+<ng-template #dynamicTemp1>
+  <div class="p-3 bg-secondary text-center">
+    <span>Dynamic Template 1</span>
+  </div>
+</ng-template>
+<ng-template #dynamicTemp2>
+  <div class="p-3 bg-info text-center">
+    <span>Dynamic Template 2</span>
+  </div>
+</ng-template>
+<ng-template #dynamicTemp3>
+  <div class="p-3 bg-warning text-center">
+    <span>Dynamic Template 3</span>
+  </div>
+</ng-template>
+<ng-template #dynamicTemp4>
+  <div class="p-3 bg-danger text-center">
+    <span>Dynamic Template 4</span>
+  </div>
+</ng-template>
+<ng-template #dynamicTemp>
+  <div class="p-3 bg-primary text-center">
+    <span>Default Template</span>
+  </div>
+</ng-template>

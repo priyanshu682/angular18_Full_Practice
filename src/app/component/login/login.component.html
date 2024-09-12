@@ -1,0 +1,16 @@
+<div class="parent">
+  <div class="comic-login-card">
+    <div class="card-header">
+      <h2>Login</h2>
+    </div>
+    <form class="card-body">
+      <input type="text" [(ngModel)]="userObj.EmailId" placeholder="Email" name="EmailId" required>
+      <input type="password" [(ngModel)]="userObj.Password" placeholder="Password" name="Password" required>
+      <button type="button" class="login-btn" (click)="onLogin()">Login</button>
+    </form>
+    <div class="card-footer">
+      <p>Don't have an account? <a href="#">Sign up</a></p>
+    </div>
+  </div>
+
+</div>

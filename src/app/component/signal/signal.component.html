@@ -1,0 +1,25 @@
+<div class="mt-2 p-2 bg-secondary text-white rounded">
+  <h1>Signal</h1>
+  <h3>create signal, update, display</h3>
+  <h5>{{currentRole1}} -- {{currentRole2}}</h5>
+</div>
+<div class="row mt-3">
+  <div class="col-3">{{firstName()}} -- {{lastName()}} -- {{fullName()}}</div>
+  <div class="col-3">{{courseName}} {{duration()}} </div>
+  <div class="col-3">{{studentObj().name}}-{{studentObj().age}}-{{studentObj().city}}</div>
+  <div class="col-3">{{cityList()}}</div>
+</div>
+<div class="row mt-3">
+  <div class="col-3">
+    <button class="btn btn-primary" (click)="changeFirstName()">Update FName</button>
+    <button class="btn btn-warning" (click)="changeLastName()">Update LName</button>
+  </div>
+  <div class="col-3">
+  </div>
+  <div class="col-3">
+    <button class="btn btn-success" (click)="changeStudentCity()">Update City</button>
+  </div>
+  <div class="col-3">
+    <button class="btn btn-primary" (click)="addCity()">Add City</button>
+  </div>
+</div>

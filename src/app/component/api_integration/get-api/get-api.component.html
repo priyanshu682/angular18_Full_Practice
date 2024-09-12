@@ -1,0 +1,19 @@
+<app-alert [alertType]="'Success'" [message]="'This is GET API page'"></app-alert>
+<div class="row mt-3">
+  <div class="col-3">
+    <button class="btn btn-success" (click)="getAllUsers()">Get All Users</button>
+  </div>
+  <div class="col-3">
+    <select class="form-select"> @for (item of userList; track $index) { <option value="{{item.id}}">{{item.name}}
+      </option> } </select>
+  </div>
+</div>
+<div class="row mt-3">
+  <div class="col-3">
+    <button class="btn btn-success" (click)="getAllCustomers()">Get All Customers</button>
+  </div>
+  <div class="col-3">
+    <select class="form-select"> @for (item of customerList; track $index) { <option value="{{item.custId}}">
+        {{item.name}} </option> } </select>
+  </div>
+</div>
